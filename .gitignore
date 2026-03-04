@@ -9,3 +9,6 @@ db.sqlite3
 # Opcional: Cache y archivos compilados
 __pycache__/
 *.py[cod]
+
+# Idea
+.idea/
