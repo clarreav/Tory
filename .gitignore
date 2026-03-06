@@ -2,6 +2,7 @@
 venv/
 .venv/
 env/
+.env
 
 # Base de datos local
 db.sqlite3
@@ -12,3 +13,6 @@ __pycache__/
 
 # Idea
 .idea/
+
+#Filter
+borrar.txt
