@@ -1,0 +1,10 @@
+<link href="https://cdn.jsdelivr.net" rel="stylesheet">
+<div class="container mt-5" style="max-width: 500px;">
+    <h2>Registrar Producto</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success w-100">Guardar Producto</button>
+        <a href="{% url 'lista' %}" class="btn btn-link w-100 mt-2">Cancelar</a>
+    </form>
+</div>
