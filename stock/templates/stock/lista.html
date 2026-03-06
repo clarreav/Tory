@@ -1,0 +1,22 @@
+<link href="https://cdn.jsdelivr.net" rel="stylesheet">
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Inventario</h1>
+        <a href="{% url 'crear' %}" class="btn btn-primary">+ Nuevo Producto</a>
+    </div>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr><th>SKU</th><th>Nombre</th><th>Stock</th><th>Precio</th></tr>
+        </thead>
+        <tbody>
+            {% for p in productos %}
+            <tr>
+                <td>{{ p.sku }}</td>
+                <td>{{ p.nombre }}</td>
+                <td><span class="badge {% if p.cantidad <= p.stock_minimo %}bg-danger{% else %}bg-success{% endif %}">{{ p.cantidad }}</span></td>
+                <td>${{ p.precio_venta }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
